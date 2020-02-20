@@ -1,0 +1,12 @@
+# Site settings
+url: "https://chaveiroparaabrirportas24h.pt"
+
+# Build settings
+markdown: kramdown
+theme: null
+sass:
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
