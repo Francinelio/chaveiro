@@ -2,4 +2,4 @@
 .jekyll-metadata
 *.swp
 _site
-Gemfile.lock
+*.lock
