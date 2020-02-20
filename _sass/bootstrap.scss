@@ -1,9 +1,45 @@
-/*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+// Options
+$enable-shadows:                              true;
+$enable-gradients:                            true;
+$enable-responsive-font-sizes:                true;
+
+// Navbar
+$navbar-dark-brand-color:           white;
+$navbar-dark-color:                 rgba(white, 1);
+$navbar-dark-hover-color:           rgba(white, .75);
+$navbar-dark-active-color:          rgba(white, .75);
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-border-color:  rgba(white, 0);
+
+// Jumbotron
+$jumbotron-bg: none;
+$display2-weight: 400;
+$display4-weight: 400;
+
+// Cards
+$card-border-color: none;
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../webfonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../webfonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../webfonts/robotoslab-variablefontwght-webfont.woff2') format('woff2'),
+         url('../webfonts/robotoslab-variablefontwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+$font-family-sans-serif: Montserrat -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+.slab {
+    font-family: "Roboto Slab";
+    font-weight: 400;
+}
 
 @import "functions";
 @import "variables";
@@ -12,33 +48,65 @@
 @import "reboot";
 @import "type";
 @import "images";
-@import "code";
 @import "grid";
-@import "tables";
-@import "forms";
 @import "buttons";
 @import "transitions";
-@import "dropdown";
-@import "button-group";
-@import "input-group";
-@import "custom-forms";
 @import "nav";
 @import "navbar";
 @import "card";
-@import "breadcrumb";
-@import "pagination";
-@import "badge";
 @import "jumbotron";
-@import "alert";
-@import "progress";
-@import "media";
-@import "list-group";
-@import "close";
-@import "toasts";
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
-@import "spinners";
 @import "utilities";
-@import "print";
+
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+// Jumbotron
+.jumbotron {
+    height: 100%;
+    background-image: linear-gradient(rgba(20, 29, 40, 0.73), rgba(20, 29, 40, 0.73)), url("../img/photos/emergencia.webp"), url("../img/photos/emergencia.jp2");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    background-image: linear-gradient(rgba(20, 29, 40, 0.73), rgba(20, 29, 40, 0.73)), url("../img/photos/comercial.webp"), url("../img/photos/comercial.jp2");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#maps {
+    min-height: 450px;
+        background-image: url("../img/photos/lisboa.webp"), url("../img/photos/lisboa.jp2");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+#float1{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    z-index:100;
+    opacity: 85%;
+}
+
+#float2{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:100;
+    opacity: 85%;
+}
+
+// Navbar
+.offset {
+  position: relative;
+  left: 0px;
+  top: -60px;
+}
